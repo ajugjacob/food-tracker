@@ -1,4 +1,4 @@
-### Food Tracker
+# Food Tracker
 
 ## Download Bulma
 Bulma is a free, open source CSS framework based on Flexbox
