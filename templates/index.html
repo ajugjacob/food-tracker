@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<ul>
+    {% for food in food_tracker %}
+    <li>
+        <div class="columns pt-4">
+            <div class="column is-4 is-offset-one-third">
+                <div class="box">
+                    <div class="content has-text-centered">
+                        <h3>{{ food.name }}</h3>
+                        <div class="is-inline-block">
+                            <p>Carbohydrates: {{ food.carbohydrate }} g</p>
+                            <p>Fat: {{ food.fat }} g</p>
+                        </div>
+                        <div class="is-inline-block pl-5">
+                            <p>Calories: {{ food.calories }} kcal</p>
+                            <p>Proteins: {{ food.proteins }} g</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

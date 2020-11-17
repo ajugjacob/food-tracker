@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bulma/css/bulma.min.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar has-background-primary-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand ml-4">
+            <p class="navbar-item has-text-white" style="font-size: 1.6em;">Food Tracker</p>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="{{ url_for('add_food') }}" class="button is-primary">
+                        <strong>Add Item</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

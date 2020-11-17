@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="columns">
+    <div class="column pt-6 is-4 is-offset-one-third">
+        <div class>
+            <h3 class="is-size-2 pb-5">Add Item</h3>
+        </div>
+        <form method="POST">
+            <div class="field">
+            <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" name="name" type="text" placeholder="e.g Oreos">
+                </div>
+            </div>
+
+            <div class="field pt-2">
+            <label class="label">Carbohydrates (in g)</label>
+                <div class="control">
+                    <input class="input" name="carbohydrates" type="text" placeholder="e.g. XX">
+                </div>
+            </div>
+
+            <div class="field pt-2">
+            <label class="label">Fat (in g)</label>
+                <div class="control">
+                    <input class="input" name="fat" type="text" placeholder="e.g. XX">
+                </div>
+            </div>
+
+            <div class="field pt-2">
+            <label class="label">Calories (in kcal)</label>
+                <div class="control">
+                    <input class="input" name="calories" type="text" placeholder="e.g. XX">
+                </div>
+            </div>
+
+            <div class="field pt-2">
+            <label class="label">Proteins (in g)</label>
+                <div class="control">
+                    <input class="input" name="proteins" type="text" placeholder="e.g. XX">
+                </div>
+            </div>
+            <div class="control">
+            <button class="button is-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
