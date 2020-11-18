@@ -27,9 +27,11 @@ def index():
         new_cal = request.form.get('calories')
         new_prot = request.form.get('proteins')
         if new_name:
-            new_track_obj = Tracker(name=new_name, carbo=new_carb, fat=new_fat, calories=new_cal, proteins=new_prot)
-            db.session.add(new_track_obj)
-            db.session.commit()
+            existing_name = Tracker.query.filter_by(name=new_name).first()
+            if not existing_name:
+                new_track_obj = Tracker(name=new_name, carbo=new_carb, fat=new_fat, calories=new_cal, proteins=new_prot)
+                db.session.add(new_track_obj)
+                db.session.commit()
     foods = Tracker.query.all()
     food_tracker=[]
     for food in foods:
